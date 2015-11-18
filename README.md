@@ -14,8 +14,9 @@ This is my personal vim configuration.
 All plugins are managed via pathogen.
 
 **Some shortcuts:**
-`Ctrl+P`: Open nerdtree panel
-`F8`: Open symbol list
+
+* `Ctrl+P`: Open nerdtree panel
+* `F8`: Open symbol list
 
 ## Install
 
