@@ -1,23 +1,15 @@
-[submodule "neocomplete.vim"]
-        path = .vim/bundle/neocomplete.vim
-        url = https://github.com/Shougo/neocomplete.vim
-
-[submodule "tagbar"]
-        path = .vim/bundle/tagbar
-        url = https://github.com/majutsushi/tagbar.git
-
-[submodule "vim-gitgutter"]
-        path = .vim/bundle/vim-gitgutter
-        url = https://github.com/airblade/vim-gitgutter.git
-
-[submodule "nerdtree"]
-        path = .vim/bundle/nerdtree
-        url = https://github.com/scrooloose/nerdtree.git
-
-[submodule "vim-airline"]
-        path = .vim/bundle/vim-airline
-        url = https://github.com/bling/vim-airline
-
-[submodule "vim-go"]
-        path = .vim/bundle/vim-go
-        url = https://github.com/fatih/vim-go.git
+[submodule ".vim/bundle/neocomplete.vim"]
+	path = .vim/bundle/neocomplete.vim
+	url = https://github.com/Shougo/neocomplete.vim
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule ".vim/bundle/vim-go"]
+	path = .vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go
