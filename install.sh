@@ -7,11 +7,6 @@ echo 'Pathogen installed'
 
 echo 'Installing plugins...'
 mkdir -p .vim/bundle
-git submodule add https://github.com/Shougo/neocomplete.vim .vim/bundle/neocomplete.vim
-git submodule add https://github.com/majutsushi/tagbar .vim/bundle/tagbar
-git submodule add https://github.com/airblade/vim-gitgutter .vim/bundle/vim-gitgutter
-git submodule add https://github.com/scrooloose/nerdtree .vim/bundle/nerdtree
-git submodule add https://github.com/fatih/vim-go .vim/bundle/vim-go
 git submodule update
 echo 'Plugins installed'
 
