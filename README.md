@@ -3,6 +3,7 @@
 This is my personal vim configuration.
 
 **Theme:** materialtheme
+
 **Plugins:**
  - nerdtree
  - vim-go
