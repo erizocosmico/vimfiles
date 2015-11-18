@@ -1,0 +1,4 @@
+.vim/colors/*
+.vim/autoload/*
+.DS_Store
+*.swp
