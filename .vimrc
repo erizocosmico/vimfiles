@@ -7,6 +7,7 @@ set guioptions-=r
 syntax enable
 filetype plugin on
 set number
+set nobackup
 let g:go_disable_autoinstall = 0
 
 " Airline show always
