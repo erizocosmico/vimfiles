@@ -7,6 +7,7 @@ echo 'Pathogen installed'
 
 echo 'Installing plugins...'
 mkdir -p .vim/bundle
+git submodule init
 git submodule update
 echo 'Plugins installed'
 
