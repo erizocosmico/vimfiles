@@ -16,6 +16,14 @@ set laststatus=2
 filetype plugin indent on
 set expandtab
 
+" Custom indentations per file
+autocmd FileType html setlocal shiftwidth=4 tabstop=4
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2
+autocmd FileType less setlocal shiftwidth=2 tabstop=2
+autocmd FileType python setlocal shiftwidth=2 tabstop=2
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+
 " Go syntax highlighting
 let g:go_highlight_functions = 1  
 let g:go_highlight_methods = 1  
