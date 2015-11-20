@@ -28,6 +28,9 @@ autocmd FileType less setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal shiftwidth=2 tabstop=2
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 
+" Rust format on save
+let g:rustfmt_autosave = 1
+
 " Go syntax highlighting
 let g:go_highlight_functions = 1  
 let g:go_highlight_methods = 1  
