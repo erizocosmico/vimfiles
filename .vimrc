@@ -13,9 +13,6 @@ let g:go_disable_autoinstall = 0
 " Airline show always
 set laststatus=2
 
-" Sbow airline tabline
-let g:airline#extensions#tabline#enabled = 1
-
 " Indent
 filetype plugin indent on
 set expandtab
