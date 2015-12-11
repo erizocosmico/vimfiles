@@ -31,6 +31,9 @@ let g:rustfmt_autosave = 1
 " JSX no require .jsx ext
 let g:jsx_ext_required = 0
 
+" Rainbow parenthesis
+let g:rainbow_active = 1
+
 " Go syntax highlighting
 let g:go_highlight_functions = 1  
 let g:go_highlight_methods = 1  
