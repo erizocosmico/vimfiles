@@ -8,6 +8,11 @@ syntax enable
 filetype plugin on
 set number
 set nobackup
+set nowritebackup
+set noswapfile
+set history=50
+set ruler
+
 let g:go_disable_autoinstall = 0
 
 " Airline show always
@@ -18,12 +23,8 @@ filetype plugin indent on
 set expandtab
 
 " Custom indentations per file
-autocmd FileType html setlocal shiftwidth=4 tabstop=4
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-autocmd FileType css setlocal shiftwidth=2 tabstop=2
-autocmd FileType less setlocal shiftwidth=2 tabstop=2
-autocmd FileType python setlocal shiftwidth=2 tabstop=2
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=4 tabstop=4 backspace=4
+autocmd FileType javascript,css,less,scss,sass,python,ruby setlocal shiftwidth=2 tabstop=2 backspace=2
 
 " Rust format on save
 let g:rustfmt_autosave = 1
