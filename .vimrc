@@ -12,6 +12,7 @@ set nowritebackup
 set noswapfile
 set history=50
 set ruler
+set completeopt-=preview
 
 let g:go_disable_autoinstall = 0
 
