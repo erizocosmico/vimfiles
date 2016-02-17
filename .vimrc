@@ -24,8 +24,8 @@ filetype plugin indent on
 set expandtab
 
 " Custom indentations per file
-autocmd FileType html setlocal shiftwidth=4 tabstop=4 backspace=4
-autocmd FileType javascript,css,less,scss,sass,python,ruby setlocal shiftwidth=2 tabstop=2 backspace=2
+autocmd FileType javascript,html setlocal shiftwidth=4 tabstop=4 backspace=2
+autocmd FileType css,less,scss,sass,python,ruby setlocal shiftwidth=2 tabstop=2 backspace=2
 
 " Rust format on save
 let g:rustfmt_autosave = 1
