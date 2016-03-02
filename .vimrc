@@ -30,7 +30,7 @@ autocmd FileType html setlocal shiftwidth=4 tabstop=4 backspace=2
 autocmd FileType jsx,javascript,css,less,scss,sass,python,ruby setlocal shiftwidth=2 tabstop=2 backspace=2
 
 " Rust format on save
-let g:rustfmt_autosave = 1
+let g:rustfmt_autosave = 0
 
 " JSX no require .jsx ext
 let g:jsx_ext_required = 0
