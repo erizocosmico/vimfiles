@@ -13,7 +13,7 @@ echo 'Plugins installed'
 
 echo 'Installing theme...'
 mkdir -p .vim/colors
-wget https://raw.githubusercontent.com/mvader/vim-materialtheme/master/colors/materialtheme.vim -O .vim/colors/materialtheme.vim
+wget https://gist.githubusercontent.com/mvader/b42cb275d5546b691647/raw/c5c9d33b3fac705626a2b65d9275cf96a7c91384/gruvbox.vim -O .vim/colors/gruvbox.vim
 echo 'Theme installed'
 
 echo 'Linking files...'
