@@ -1,9 +1,9 @@
 call pathogen#infect()
 
 set background=dark
-colorscheme gruvbox 
+colorscheme firewatch
 
-set guifont=Hack:h14
+set guifont=Hack:h12
 set guioptions-=L
 set guioptions-=r
 syntax enable

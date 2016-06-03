@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/rainbow"]
 	path = .vim/bundle/rainbow
 	url = https://github.com/luochen1990/rainbow.git
+[submodule ".vim/bundle/vim-firewatch"]
+	path = .vim/bundle/vim-firewatch
+	url = https://github.com/mvader/vim-firewatch

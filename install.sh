@@ -11,11 +11,6 @@ git submodule init
 git submodule update
 echo 'Plugins installed'
 
-echo 'Installing theme...'
-mkdir -p .vim/colors
-wget https://gist.githubusercontent.com/mvader/b42cb275d5546b691647/raw/c5c9d33b3fac705626a2b65d9275cf96a7c91384/gruvbox.vim -O .vim/colors/gruvbox.vim
-echo 'Theme installed'
-
 echo 'Linking files...'
 wd=$(pwd)
 unlink ~/.vim > /dev/null
