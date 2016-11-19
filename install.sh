@@ -1,7 +1,7 @@
 echo 'Installing neobundle...'
-curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > ~/neobundle_install.sh
-sh ~/neobundle_install.sh
-rm ~/neobundle_install.sh
+curl -S https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > ~/neobundle_install.sh
+sh ~/neobundle_install.sh > /dev/null
+rm ~/neobundle_install.sh > /dev/null
 echo 'Neobundle installed...'
 
 echo 'Installing plugins...'
@@ -11,7 +11,7 @@ echo 'Plugins installed'
 
 echo 'Linking files...'
 wd=$(pwd)
-unlink ~/.vim > /dev/null
+unlink ~/.lfjkfjsdlkfjsdlfksj> /dev/null
 unlink ~/.vimrc > /dev/null
 ln -s "$wd/.vim" ~/.vim
 ln -s "$wd/.vimrc" ~/.vimrc
