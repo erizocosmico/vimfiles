@@ -1,5 +1,3 @@
-.vim/colors/*
-.vim/autoload/*
-.vim/bundle/*
+.vim/*
 .DS_Store
 *.swp
