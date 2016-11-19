@@ -61,13 +61,7 @@ set history=100
 set ruler
 set completeopt-=preview
 set lazyredraw
-
-" Enable to copy to clipboard for operations like yank, delete, change and put
-" http://stackoverflow.com/questions/20186975/vim-mac-how-to-copy-to-clipboard-without-pbcopy
-if has('unnamedplus')
-  set clipboard^=unnamed
-  set clipboard^=unnamedplus
-endif
+set clipboard+=unnamedplus
 
 " This enables us to undo files even if you exit Vim.
 if has('persistent_undo')
@@ -96,6 +90,7 @@ let g:deoplete#sources#go#use_cache = 1
 nmap <leader>n :tabn<cr>
 nmap <leader>m :tabp<cr>
 nmap <leader>b :tabfirst<cr>
+nmap <leader>y +y
 
 " Airline show always
 set laststatus=2
