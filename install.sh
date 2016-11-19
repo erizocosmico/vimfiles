@@ -5,10 +5,18 @@ cp vim-pathogen/autoload/pathogen.vim .vim/autoload/
 rm -rf vim-pathogen
 echo 'Pathogen installed'
 
+echo 'Installing neobundle...'
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh > ~/neobundle_install.sh
+sh ~/neobundle_install.sh
+rm ~/neobundle_install.sh
+echo 'Neobundle installed...'
+
 echo 'Installing plugins...'
 mkdir -p .vim/bundle
 git submodule init
 git submodule update
+pip install --upgrade --user neovim > /dev/null
+go get -u github.com/nsf/gocode > /dev/null
 echo 'Plugins installed'
 
 echo 'Linking files...'
@@ -17,5 +25,5 @@ unlink ~/.vim > /dev/null
 unlink ~/.vimrc > /dev/null
 ln -s "$wd/.vim" ~/.vim
 ln -s "$wd/.vimrc" ~/.vimrc
-echo 'Linked files. All setup!'
+echo 'Linked files. All setup! Do not forget to run :UpdateRemotePlugins'
 

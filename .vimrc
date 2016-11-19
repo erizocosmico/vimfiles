@@ -1,6 +1,29 @@
+if has('vim_starting')
+  " Required:
+  set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('/Users/mvader/.config/nvim/bundle'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Add or remove your Bundles here:
+NeoBundle 'Shougo/deoplete.nvim'
+NeoBundle 'zchee/deoplete-go', {'build': {'unix': 'make'}}
+NeoBundle 'carlitux/deoplete-ternjs', { 'build': { 'mac': 'npm install -g tern', 'unix': 'npm install -g tern' }}
+
+" Required:
+call neobundle#end()
+
+NeoBundleCheck
+
 call pathogen#infect()
 
 set background=dark
+set termguicolors
 colorscheme firewatch
 
 set guifont=Hack:h12
@@ -12,11 +35,23 @@ set number
 set nobackup
 set nowritebackup
 set noswapfile
-set history=50
+set history=100
 set ruler
 set completeopt-=preview
 
 let g:go_disable_autoinstall = 0
+
+" neocomplete like
+set completeopt+=noinsert
+" deoplete.nvim recommend
+set completeopt+=noselect
+
+" Run deoplete.nvim automatically
+call deoplete#enable()
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#use_cache = 1
 
 " Airline show always
 set laststatus=2
@@ -47,9 +82,6 @@ let g:go_highlight_build_constraints = 1
 
 " Enable goimports instead of go fmt
 let g:go_fmt_command = "goimports"
-
-" Enable autocomplete at startup
-let g:neocomplete#enable_at_startup = 1
 
 " TagBar
 let g:tagbar_type_go = {  
