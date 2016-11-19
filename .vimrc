@@ -16,13 +16,11 @@ NeoBundle 'zchee/deoplete-go', {'build': {'unix': 'make'}}
 NeoBundle 'carlitux/deoplete-ternjs', { 'build': { 'mac': 'npm install -g tern', 'unix': 'npm install -g tern' }}
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'fatih/vim-go'
+NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'bling/vim-airline'
-NeoBundle 'rust-lang/rust.vim'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'fatih/vim-go'
 NeoBundle 'ElmCast/elm-vim'
 NeoBundle 'joshdick/onedark.vim'
 NeoBundle 'luochen1990/rainbow'
@@ -41,6 +39,7 @@ set guifont=Hack:h12
 set guioptions-=L
 set guioptions-=r
 syntax enable
+syntax on
 filetype plugin on
 set number
 set nobackup
@@ -50,6 +49,7 @@ set history=100
 set ruler
 set completeopt-=preview
 
+let g:polyglot_disabled = ['elm', 'go']
 let g:go_disable_autoinstall = 0
 let g:elm_format_autosave = 1
 
@@ -75,12 +75,6 @@ set expandtab
 " Custom indentations per file
 autocmd FileType html setlocal shiftwidth=4 tabstop=4 backspace=2
 autocmd FileType jsx,javascript,css,less,scss,sass,python,ruby setlocal shiftwidth=2 tabstop=2 backspace=2
-
-" Rust format on save
-let g:rustfmt_autosave = 0
-
-" JSX no require .jsx ext
-let g:jsx_ext_required = 0
 
 " Rainbow parenthesis
 let g:rainbow_active = 1
@@ -125,8 +119,27 @@ let g:tagbar_type_go = {
 \ }
 
 " Add command to toggle tagbar
-nmap <F8> :TagbarToggle<CR>
+nmap <C-x> :TagbarToggle<CR>
 
-" Ctrl+n to toggle nerdtree
-map <C-p> :NERDTreeToggle<CR> 
+" Syntastic
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_wq = 0
+let g:airline#extensions#syntastic#enabled = 0
+
+" Elm
+let g:elm_detailed_complete = 1
+let g:elm_format_autosave = 1
+let g:elm_syntastic_show_warnings = 1
+
+" Airline
+let g:airline_left_sep= '░'
+let g:airline_right_sep= '░'
+
+" NerdTree
+map <C-z> :NERDTreeToggle<CR>
+let g:NERDTreeWinSize = 24
+let g:NERDTreeMinimalUI = 1
+autocmd VimEnter * if (0 == argc()) | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
