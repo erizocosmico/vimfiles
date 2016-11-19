@@ -4,7 +4,7 @@ if has('vim_starting')
 endif
 
 " Required:
-call neobundle#begin(expand('/Users/mvader/.config/nvim/bundle'))
+call neobundle#begin(expand('~/.config/nvim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -14,17 +14,28 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/deoplete.nvim'
 NeoBundle 'zchee/deoplete-go', {'build': {'unix': 'make'}}
 NeoBundle 'carlitux/deoplete-ternjs', { 'build': { 'mac': 'npm install -g tern', 'unix': 'npm install -g tern' }}
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'fatih/vim-go'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'rust-lang/rust.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'leafgarland/typescript-vim'
+NeoBundle 'ElmCast/elm-vim'
+NeoBundle 'joshdick/onedark.vim'
+NeoBundle 'luochen1990/rainbow'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 
 " Required:
 call neobundle#end()
 
 NeoBundleCheck
 
-call pathogen#infect()
-
 set background=dark
 set termguicolors
-colorscheme firewatch
+colorscheme onedark
 
 set guifont=Hack:h12
 set guioptions-=L
@@ -40,6 +51,7 @@ set ruler
 set completeopt-=preview
 
 let g:go_disable_autoinstall = 0
+let g:elm_format_autosave = 1
 
 " neocomplete like
 set completeopt+=noinsert
