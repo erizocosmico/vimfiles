@@ -32,12 +32,12 @@ call neobundle#end()
 NeoBundleCheck
 
 set background=dark
-set termguicolors
 colorscheme onedark
 set guifont=Hack:h12
 set guioptions-=L
 set guioptions-=r
-
+set termguicolors
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax enable
 filetype off
 filetype plugin on
