@@ -11,7 +11,7 @@ echo 'Plugins installed'
 
 echo 'Linking files...'
 wd=$(pwd)
-unlink ~/.lfjkfjsdlkfjsdlfksj> /dev/null
+unlink ~/.vim > /dev/null
 unlink ~/.vimrc > /dev/null
 ln -s "$wd/.vim" ~/.vim
 ln -s "$wd/.vimrc" ~/.vimrc
