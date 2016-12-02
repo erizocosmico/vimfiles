@@ -34,10 +34,11 @@ NeoBundleCheck
 set background=dark
 set termguicolors
 colorscheme github
-set guifont=Hack:h12
+set guifont=Hack:h14
 set guioptions-=L
 set guioptions-=r
-
+set termguicolors
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 syntax enable
 filetype off
 filetype plugin on
