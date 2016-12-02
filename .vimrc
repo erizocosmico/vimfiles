@@ -22,7 +22,7 @@ NeoBundle 'sheerun/vim-polyglot'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'ElmCast/elm-vim'
-NeoBundle 'joshdick/onedark.vim'
+NeoBundle 'endel/vim-github-colorscheme'
 NeoBundle 'luochen1990/rainbow'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 
@@ -33,7 +33,7 @@ NeoBundleCheck
 
 set background=dark
 set termguicolors
-colorscheme onedark
+colorscheme github
 set guifont=Hack:h12
 set guioptions-=L
 set guioptions-=r
